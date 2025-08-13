@@ -2,16 +2,6 @@
 
 ![Continue logo](media/readme.png)
 
-</div>
-
-<h1 align="center">Continue</h1>
-
-<div align="center">
-
-**[Continue](https://docs.continue.dev) enables developers to create, share, and use custom AI code assistants with our open-source [VS Code extension](https://marketplace.visualstudio.com/items?itemName=Continue.continue) and [hub of models, rules, prompts, docs, and other building blocks](https://hub.continue.dev)**
-
-</div>
-
 <div align="center">
 
 <a target="_blank" href="https://opensource.org/licenses/Apache-2.0" style="background:none">
@@ -25,6 +15,18 @@
 </a>
 
 <p></p>
+
+</div>
+
+<h1 align="center">Continue</h1>
+
+<div align="center">
+
+**Ship faster with Continuous AI**
+
+**Build and run custom agents across your IDE, terminal, and CI**
+
+</div>
 
 ## Agent
 
