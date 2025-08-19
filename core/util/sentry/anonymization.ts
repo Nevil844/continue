@@ -1,4 +1,6 @@
-import { ErrorEvent } from "@sentry/core";
+import * as Sentry from "@sentry/node";
+
+type ErrorEvent = Sentry.ErrorEvent;
 /**
  * Minimalist Sentry anonymization utilities
  */

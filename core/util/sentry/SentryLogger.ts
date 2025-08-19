@@ -25,7 +25,7 @@ export class SentryLogger {
 
       // Filter integrations that use the global variable
       const integrations = Sentry.getDefaultIntegrations({}).filter(
-        (defaultIntegration) => {
+        (defaultIntegration: any) => {
           // Remove integrations that might interfere with shared environments
           return ![
             "OnUncaughtException",
@@ -52,7 +52,7 @@ export class SentryLogger {
         sendDefaultPii: false,
 
         // Strip sensitive data and add basic properties before sending events
-        beforeSend(event) {
+        beforeSend(event: any) {
           // First apply anonymization
           const anonymizedEvent = anonymizeSentryEvent(event);
           if (!anonymizedEvent) return null;
@@ -197,7 +197,7 @@ export function createSpan<T>(
   }
 
   // Use withScope from Sentry to isolate the span context
-  return Sentry.withScope((isolatedScope) => {
+  return Sentry.withScope((isolatedScope: any) => {
     isolatedScope.setClient(client);
     return Sentry.startSpan(
       {

@@ -59,7 +59,7 @@ const TelemetryProviders = ({ children }: PropsWithChildren) => {
         sendDefaultPii: false,
 
         // Strip sensitive data and add basic properties
-        beforeSend(event) {
+        beforeSend(event: any) {
           // Apply comprehensive anonymization using shared logic
           const anonymizedEvent = anonymizeSentryEvent(event);
           if (!anonymizedEvent) return null;
