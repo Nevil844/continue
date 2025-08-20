@@ -1,0 +1,5 @@
+- [x] Find the organization dropdown menu component in the codebase
+- [x] Examine existing menu styles for border and corner radius reference
+- [x] Add thin light grey border to the organization menu
+- [x] Apply matching corner radius to match other menus
+- [x] Test the visual changes

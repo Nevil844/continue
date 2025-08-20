@@ -8,15 +8,15 @@ export const MODEL_WINDOW_SIZES: Record<
   NEXT_EDIT_MODELS,
   { topMargin: number; bottomMargin: number }
 > = {
-  "mercury-coder": {
+  [NEXT_EDIT_MODELS.MERCURY_CODER]: {
     topMargin: 0,
     bottomMargin: 5,
   }, // mercury coder uses full file diff, so this should be unnecessary
-  "mercury-coder-nextedit": {
+  [NEXT_EDIT_MODELS.MERCURY_CODER_NEXTEDIT]: {
     topMargin: 0,
     bottomMargin: 5,
   }, // mercury coder nextedit uses full file diff, so this should be unnecessary
-  instinct: { topMargin: 1, bottomMargin: 5 },
+  [NEXT_EDIT_MODELS.INSTINCT]: { topMargin: 1, bottomMargin: 5 },
 };
 
 export const UNIQUE_TOKEN = "<|!@#IS_NEXT_EDIT!@#|>";
