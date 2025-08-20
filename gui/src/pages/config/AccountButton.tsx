@@ -47,7 +47,7 @@ export function AccountButton() {
           </PopoverButton>
 
           <Transition>
-            <PopoverPanel className="bg-vsc-input-background xs:p-4 absolute right-0 mt-1 rounded-md border border-zinc-700 p-2 shadow-lg">
+            <PopoverPanel className="bg-vsc-input-background xs:p-4 absolute right-0 mt-1 rounded-md border border-zinc-500 p-2 shadow-lg">
               <div className="flex flex-col gap-3">
                 <div className="flex flex-col">
                   <span className="font-medium">{session.account.label}</span>
