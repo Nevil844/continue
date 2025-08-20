@@ -1,0 +1,6 @@
+- [X] Identify the user profile/account menu component in the codebase
+- [X] Locate the styling for this menu component
+- [X] Find similar menus to match border and corner radius styling
+- [X] Add light grey border to the profile menu
+- [X] Update corner radius to match other menus
+- [X] Test and verify the changes
