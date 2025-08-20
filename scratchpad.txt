@@ -1,0 +1,5 @@
+- [X] Explore codebase structure to find UI components
+- [X] Locate user profile/account menu component
+- [X] Find other menus to match styling (border and corner radius)
+- [X] Apply border and corner radius styling to user profile menu
+- [X] Verify changes are correct
