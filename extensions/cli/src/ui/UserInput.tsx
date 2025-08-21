@@ -27,6 +27,7 @@ interface UserInputProps {
   placeholder?: string;
   hideNormalUI?: boolean;
   isRemoteMode?: boolean;
+  onToggleProfile?: () => void;
 }
 
 const UserInput: React.FC<UserInputProps> = ({
@@ -40,6 +41,7 @@ const UserInput: React.FC<UserInputProps> = ({
   placeholder,
   hideNormalUI = false,
   isRemoteMode = false,
+  onToggleProfile,
 }) => {
   const [textBuffer] = useState(() => new TextBuffer());
   const [inputHistory] = useState(() => new InputHistory());
@@ -416,6 +418,7 @@ const UserInput: React.FC<UserInputProps> = ({
         showSlashCommands,
         showFileSearch,
         cycleModes,
+        toggleProfile: onToggleProfile,
       })
     ) {
       return;

@@ -9,10 +9,11 @@ interface ControlKeysOptions {
   showSlashCommands: boolean;
   showFileSearch: boolean;
   cycleModes: () => Promise<PermissionMode>;
+  toggleProfile?: () => void;
 }
 
 export function handleControlKeys(options: ControlKeysOptions): boolean {
-  const { input, key, exit, showSlashCommands, showFileSearch, cycleModes } =
+  const { input, key, exit, showSlashCommands, showFileSearch, cycleModes, toggleProfile } =
     options;
 
   // Handle Ctrl+C and Ctrl+D
@@ -24,6 +25,12 @@ export function handleControlKeys(options: ControlKeysOptions): boolean {
   // Handle Ctrl+L to refresh screen (clear terminal artifacts)
   if (key.ctrl && input === "l") {
     process.stdout.write("\x1b[2J\x1b[H");
+    return true;
+  }
+
+  // Handle Ctrl+A or Cmd+A to toggle profile selector
+  if ((key.ctrl || key.meta) && input === "a" && toggleProfile) {
+    toggleProfile();
     return true;
   }
 

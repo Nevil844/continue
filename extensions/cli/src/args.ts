@@ -174,7 +174,7 @@ export function parseArgs(): CommandLineArgs {
   const flagsWithValues = ["--config", "--org", "--rule", "--format"];
   const nonFlagArgs = args.filter((arg, index) => {
     // Skip flags (starting with --)
-    if (arg.startsWith("--") || arg === "-p") return false;
+    if (!arg || arg.startsWith("--") || arg === "-p") return false;
 
     // Skip flag values
     const prevArg = index > 0 ? args[index - 1] : "";

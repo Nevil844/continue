@@ -263,6 +263,7 @@ const TUIChat: React.FC<TUIChatProps> = ({
           handleFileAttached={handleFileAttached}
           isInputDisabled={isInputDisabled}
           isRemoteMode={isRemoteMode}
+          navigateTo={navigateTo}
         />
 
         {/* Free trial status and Continue CLI info - always show */}

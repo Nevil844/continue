@@ -7,6 +7,7 @@ import type { NavigationScreen } from "../context/NavigationContext.js";
 import { FreeTrialTransitionUI } from "../FreeTrialTransitionUI.js";
 import { MCPSelector } from "../MCPSelector.js";
 import { ModelSelector } from "../ModelSelector.js";
+import { ProfileSelector } from "../ProfileSelector.js";
 import { SessionSelector } from "../SessionSelector.js";
 import type { ConfigOption, ModelOption } from "../types/selectorTypes.js";
 import { UserInput } from "../UserInput.js";
@@ -37,6 +38,7 @@ interface ScreenContentProps {
   handleFileAttached: (filePath: string, content: string) => void;
   isInputDisabled: boolean;
   isRemoteMode: boolean;
+  navigateTo?: (screen: NavigationScreen) => void;
 }
 
 export const ScreenContent: React.FC<ScreenContentProps> = ({
@@ -58,6 +60,7 @@ export const ScreenContent: React.FC<ScreenContentProps> = ({
   handleFileAttached,
   isInputDisabled,
   isRemoteMode,
+  navigateTo,
 }) => {
   // Login prompt
   if (isScreenActive("login") && navState.screenData) {
@@ -122,6 +125,21 @@ export const ScreenContent: React.FC<ScreenContentProps> = ({
     );
   }
 
+  // Profile/Organization selector
+  if (isScreenActive("profile")) {
+    return (
+      <ProfileSelector
+        onSelect={(action) => {
+          if (action === "logout") {
+            handleReload(); // Reload after logout
+          }
+          // Other actions can trigger navigation or refreshes as needed
+        }}
+        onCancel={closeCurrentScreen}
+      />
+    );
+  }
+
   // Free trial transition UI
   if (isScreenActive("free-trial")) {
     return <FreeTrialTransitionUI onReload={handleReload} />;
@@ -150,6 +168,7 @@ export const ScreenContent: React.FC<ScreenContentProps> = ({
         onFileAttached={handleFileAttached}
         disabled={isInputDisabled}
         isRemoteMode={isRemoteMode}
+        onToggleProfile={() => navigateTo?.("profile")}
       />
     );
   }
