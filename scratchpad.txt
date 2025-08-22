@@ -1,0 +1,4 @@
+- [x] Find the AssistantAndOrgListbox component and understand the current menu toggle behavior
+- [x] Locate the "Reload assistants" click handler
+- [x] Modify the handler to prevent menu from closing when "Reload assistants" is clicked
+- [x] Test the implementation to ensure it works correctly

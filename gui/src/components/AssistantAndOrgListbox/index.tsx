@@ -172,13 +172,13 @@ export function AssistantAndOrgListbox() {
                 </span>
               </ListboxOption>
 
-              <ListboxOption
-                value="reload-assistant"
-                fontSizeModifier={-2}
-                className="border-border border-b px-2 py-1.5"
-                onClick={() =>
-                  refreshProfiles("Manual refresh from assistant list")
-                }
+              <div
+                className="border-border border-b px-2 py-1.5 cursor-pointer hover:bg-list-active hover:text-list-active-foreground"
+                onClick={(e: React.MouseEvent) => {
+                  e.stopPropagation();
+                  e.preventDefault();
+                  refreshProfiles("Manual refresh from assistant list");
+                }}
               >
                 <span
                   className="text-description flex flex-row items-center"
@@ -192,7 +192,7 @@ export function AssistantAndOrgListbox() {
                   />
                   Reload agents
                 </span>
-              </ListboxOption>
+              </div>
 
               <div
                 className="text-description border-border flex items-center justify-between gap-1.5 border-x-0 border-b-0 border-t border-solid px-2 py-2"
