@@ -1,0 +1,6 @@
+- [X] Analyze codebase to find assistant menu/reload functionality
+- [X] Identify where menu close behavior is implemented
+- [X] Modify reload assistants to keep menu open
+- [X] Test changes and verify functionality
+- [X] Create summary of changes
+- [ ] Create branch and commit changes

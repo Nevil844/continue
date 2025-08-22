@@ -1,0 +1,34 @@
+Summary of Changes:
+
+Modified the "Reload assistants" button behavior to prevent the assistant menu from closing when clicked.
+
+Files Modified:
+- gui/src/components/AssistantAndOrgListbox/index.tsx
+
+Changes Made:
+1. Replaced the ListboxOption component with a plain div element for the "Reload assistants" option
+2. Added onClick event handler with stopPropagation() and preventDefault() to prevent menu closure
+3. Applied appropriate CSS classes for hover states and styling to maintain visual consistency
+
+Code Changes:
+```tsx
+// Before:
+<ListboxOption
+  value="reload-assistant"
+  fontSizeModifier={-2}
+  className="border-border border-b px-2 py-1.5"
+  onClick={() => refreshProfiles("Manual refresh from assistant list")}
+>
+
+// After:
+<div
+  className="border-border border-b px-2 py-1.5 flex flex-row items-center cursor-pointer hover:bg-list-active hover:text-list-active-foreground text-foreground"
+  onClick={(e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    refreshProfiles("Manual refresh from assistant list");
+  }}
+>
+```
+
+The menu will now stay open when the "🔄 Reload agents" button is clicked, allowing users to see the updated assistant list without having to reopen the menu.
