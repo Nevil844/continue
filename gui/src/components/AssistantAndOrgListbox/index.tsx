@@ -178,6 +178,7 @@ export function AssistantAndOrgListbox() {
                   e.stopPropagation();
                   e.preventDefault();
                   refreshProfiles("Manual refresh from assistant list");
+                  // Don't call close() here to keep menu open
                 }}
               >
                 <span
