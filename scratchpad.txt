@@ -1,0 +1,7 @@
+- [X] Understand the UI structure and find relevant code files
+- [X] Locate the "Reload assistants" functionality
+- [X] Find where menu close behavior is implemented
+- [X] Modify code to keep menu open for "Reload assistants" option
+- [X] Test and verify the change works correctly
+- [X] Create summary and send to Slack
+- [ ] Create branch, commit, and push changes
