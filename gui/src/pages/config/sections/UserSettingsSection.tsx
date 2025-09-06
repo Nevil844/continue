@@ -323,7 +323,7 @@ export function UserSettingsSection() {
                   <span>Show Experimental Settings</span>
                 </div>
                 <div
-                  className={`duration-400 overflow-hidden transition-all ease-in-out ${
+                  className={`duration-300 overflow-hidden transition-all ease-in-out ${
                     showExperimental
                       ? "max-h-96" /* Increased from max-h-40 to max-h-96 to accommodate ContinueFeaturesMenu */
                       : "max-h-0"
