@@ -38,7 +38,7 @@ export function ConfigRow({
     >
       <div className="flex flex-col">
         <span className="text-sm font-medium">{title}</span>
-        <p className="mt-0.5 text-xs text-gray-500">{description}</p>
+        <p className="mt-0.5 text-xs text-description">{description}</p>
       </div>
       <div className="flex items-center gap-2">
         {children}
